@@ -3,6 +3,7 @@ import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
 import Guitar from "../components/Guitar/Guitar";
+import NavSidebar from "../components/NavSidebar/NavSidebar";
 
 const Home: NextPage = () => {
   return (
@@ -10,6 +11,8 @@ const Home: NextPage = () => {
       <Head>
         <title>UVic Guitar Club</title>
       </Head>
+
+      <NavSidebar />
 
       <main className={styles.main}>
         <h1 className={styles.title}>Welcome to the UVIC Guitar Club!</h1>
