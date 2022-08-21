@@ -2,22 +2,21 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
-
-//Image component
-const Guitar = () => (
-  <Image
-    src="public\guitarbody.png" // Route of the image file
-    height={144} // Desired size with correct aspect ratio
-    width={144} // Desired size with correct aspect ratio
-    alt="GuitarStroller"
-  />
-);
+import Guitar from "../components/Guitar/Guitar";
+import NavSidebar from "../components/NavSidebar/NavSidebar";
 
 const Home: NextPage = () => {
   return (
     <div className={styles.container}>
+      <Head>
+        <title>UVic Guitar Club</title>
+      </Head>
+
+      <NavSidebar />
+
       <main className={styles.main}>
         <h1 className={styles.title}>Welcome to the UVIC Guitar Club!</h1>
+        <Guitar />
       </main>
 
       <footer className={styles.footer}>
@@ -37,6 +36,7 @@ const Home: NextPage = () => {
               />
             </span>
           </a>
+
           <a href="https://uvss.ca/" target="_blank" rel="noopener noreferrer">
             <span className={styles.logo}>
               <Image
