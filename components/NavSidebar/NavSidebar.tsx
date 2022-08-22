@@ -18,8 +18,13 @@ const NavSidebar = () => {
             className="collapse navbar-collapse flex-grow items-center"
             id="navbarSupportedContent1"
           >
+            <img
+              src="/public/l&mlogo.jpg"
+              style={{ width: "10px", filter: "contrast(1.5) saturate(0.5)" }}
+              alt="Guitar"
+            />
             <a className="text-xl text-white pr-2 font-semibold" href="#">
-              Navbar
+              Test
             </a>
             {/* <!-- Left links --> */}
             <ul className="navbar-nav flex flex-col pl-0 list-style-none mr-auto">
