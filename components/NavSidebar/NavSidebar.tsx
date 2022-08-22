@@ -1,66 +1,49 @@
 import React from "react";
+import styled from "styled-components";
+
+type NavigationLink = {
+  name: string;
+  link: string;
+};
+
+const navLinks: NavigationLink[] = [
+  { name: "About", link: "/#about" },
+  { name: "What We Do", link: "/#what-we-do" },
+  { name: "Projects", link: "/#projects" },
+  { name: "Get Involved", link: "/#get-involved" },
+];
+
+const InactiveLink = styled.div`
+  background-color: #fff;
+  border-left: 3px solid #fff;
+  padding: 0.25em 0.5em;
+  transition: 0.3s ease;
+  :hover {
+    background-color: #eef2ff;
+    color: #4f46e5;
+    border-color: #4f46e5;
+  }
+`;
+
+// This doesnt work!!!!
+const ActiveLink = styled.div`
+  background-color: #eef2ff;
+  border-left: 3px solid #4f46e5;
+  color: #4f46e5;
+  padding: 0.25em 0.5em;
+`;
 
 const NavSidebar = () => {
   return (
-    <>
-      <nav className="relative w-full flex flex-wrap items-center justify-between py-3 bg-gray-900 text-gray-200 shadow-lg navbar navbar-expand-lg navbar-light">
-        <div className="container-fluid w-full flex flex-wrap items-center justify-between px-6">
-          <button
-            className="navbar-toggler text-gray-200 border-0 hover:shadow-none hover:no-underline py-2 px-2.5 bg-transparent focus:outline-none focus:ring-0 focus:shadow-none focus:no-underline"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent1"
-            aria-controls="navbarSupportedContent"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          ></button>
-          <div
-            className="collapse navbar-collapse flex-grow items-center"
-            id="navbarSupportedContent1"
-          >
-            <a className="text-xl text-white pr-2 font-semibold" href="#">
-              Navbar
-            </a>
-            {/* <!-- Left links --> */}
-            <ul className="navbar-nav flex flex-col pl-0 list-style-none mr-auto">
-              <li className="nav-item p-2">
-                <a className="nav-link text-white" href="#">
-                  About
-                </a>
-              </li>
-              <li className="nav-item p-2">
-                <a
-                  className="nav-link text-white opacity-60 hover:opacity-80 focus:opacity-80 p-0"
-                  href="#"
-                >
-                  What we do
-                </a>
-              </li>
-              <li className="nav-item p-2">
-                <a
-                  className="nav-link text-white opacity-60 hover:opacity-80 focus:opacity-80 p-0"
-                  href="#"
-                >
-                  Projects
-                </a>
-              </li>
-              <li className="nav-item p-2">
-                <a
-                  className="nav-link text-white opacity-60 hover:opacity-80 focus:opacity-80 p-0"
-                  href="#"
-                >
-                  Get involved
-                </a>
-              </li>
-            </ul>
-            {/* <!-- Left links --> */}
-          </div>
-          {/* <!-- Collapsible wrapper --> */}
-
-          {/* <!-- Right elements --> */}
-        </div>
-      </nav>
-    </>
+    <ul>
+      {navLinks.map((navLink: NavigationLink) => (
+        <li key={navLink.name}>
+          <a href={navLink.link}>
+            <InactiveLink>{navLink.name}</InactiveLink>
+          </a>
+        </li>
+      ))}
+    </ul>
   );
 };
 

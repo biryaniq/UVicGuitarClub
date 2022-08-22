@@ -4,20 +4,126 @@ import Image from "next/image";
 import styles from "../styles/Home.module.css";
 import Guitar from "../components/Guitar/Guitar";
 import NavSidebar from "../components/NavSidebar/NavSidebar";
+import styled from "styled-components";
+import { Router } from "react-router-dom";
+
+const Sidebar = styled.div`
+  width: 14em;
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  background-color: white;
+`;
+
+const Main = styled.main`
+  padding-left: 14em;
+`;
+
+const Container = styled.div`
+  height: 100%;
+`;
+
+const GuitarView = styled(Guitar)`
+  height: 100%;
+`;
+
+const GuitarPosition = styled.div`
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+`;
 
 const Home: NextPage = () => {
   return (
-    <div className={styles.container}>
+    <Container>
       <Head>
         <title>UVic Guitar Club</title>
       </Head>
-
-      <NavSidebar />
-
-      <main className={styles.main}>
-        <h1 className={styles.title}>Welcome to the UVIC Guitar Club!</h1>
-        <Guitar />
-      </main>
+      <Sidebar>
+        <NavSidebar />
+      </Sidebar>
+      <Main>
+        <GuitarPosition>
+          <GuitarView />
+        </GuitarPosition>
+        <h2>Content</h2>
+        <h2>Content</h2>
+        <h2>Content</h2>
+        <h2>Content</h2>
+        <h2>Content</h2>
+        <h2>Content</h2>
+        <h2>Content</h2>
+        <h2>Content</h2>
+        <h2>Content</h2>
+        <h2>Content</h2>
+        <h2>Content</h2>
+        <h2>Content</h2>
+        <h2>Content</h2>
+        <h2>Content</h2>
+        <h2>Content</h2>
+        <h2>Content</h2>
+        <h2>Content</h2>
+        <h2>Content</h2>
+        <h2>Content</h2>
+        <h2>Content</h2>
+        <h2>Content</h2>
+        <h2>Content</h2>
+        <h2>Content</h2>
+        <h2>Content</h2>
+        <h2>Content</h2>
+        <h2>Content</h2>
+        <h2>Content</h2>
+        <h2>Content</h2>
+        <h2>Content</h2>
+        <h2>Content</h2>
+        <h2>Content</h2>
+        <h2>Content</h2>
+        <h2>Content</h2>
+        <h2>Content</h2>
+        <h2>Content</h2>
+        <h2>Content</h2>
+        <h2>Content</h2>
+        <h2>Content</h2>
+        <h2>Content</h2>
+        <h2>Content</h2>
+        <h2>Content</h2>
+        <h2>Content</h2>
+        <h2>Content</h2>
+        <h2>Content</h2>
+        <h2>Content</h2>
+        <h2>Content</h2>
+        <h2>Content</h2>
+        <h2>Content</h2>
+        <h2>Content</h2>
+        <h2>Content</h2>
+        <h2>Content</h2>
+        <h2>Content</h2>
+        <h2>Content</h2>
+        <h2>Content</h2>
+        <h2>Content</h2>
+        <h2>Content</h2>
+        <h2>Content</h2>
+        <h2>Content</h2>
+        <h2>Content</h2>
+        <h2>Content</h2>
+        <h2>Content</h2>
+        <h2>Content</h2>
+        <h2>Content</h2>
+        <h2>Content</h2>
+        <h2>Content</h2>
+        <h2>Content</h2>
+        <h2>Content</h2>
+        <h2>Content</h2>
+        <div>
+          <h1 className={styles.title}>Welcome to the UVIC Guitar Club!</h1>
+        </div>
+      </Main>
 
       <footer className={styles.footer}>
         <div className="h-56 grid grid-cols-3 gap-4 content-evenly ...">
@@ -49,7 +155,7 @@ const Home: NextPage = () => {
           </a>
         </div>
       </footer>
-    </div>
+    </Container>
   );
 };
 
