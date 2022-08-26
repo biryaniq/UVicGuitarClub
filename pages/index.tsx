@@ -45,7 +45,7 @@ const Home: NextPage = () => {
       <Head>
         <title>UVic Guitar Club</title>
       </Head>
-      
+
       <Sidebar>
         <NavSidebar />
       </Sidebar>
@@ -156,7 +156,7 @@ const Home: NextPage = () => {
           </a>
         </div>
       </footer>
-    </div>
+    </Container>
   );
 };
 
