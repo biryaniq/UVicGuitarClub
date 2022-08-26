@@ -127,22 +127,47 @@ const Home: NextPage = () => {
       </Main>
 
       <footer className={styles.footer}>
-        <div className="h-56 grid grid-cols-3 gap-4 content-evenly ...">
-          <a
-            href="https://www.long-mcquade.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Sponsored by{" "}
-            <span className={styles.logo}>
-              <Image
-                src="/l&mlogo.jpg"
-                alt="Long & McQuade Logo"
-                width={150}
-                height={30}
-              />
-            </span>
-          </a>
+        {/* <div className="flex mb-4">
+          <div className="w-1/2 bg-gray-400 h-12"></div>
+          <div className="w-1/2 bg-gray-500 h-12"></div>
+        </div> */}
+
+        <div className="flex mb-4">
+          <div className="w-1/2 h-12">
+            <a
+              href="https://www.long-mcquade.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Sponsored by{" "}
+              <span className={styles.logo}>
+                <Image
+                  src="/l&mlogo.jpg"
+                  alt="Long & McQuade Logo"
+                  width={150}
+                  height={30}
+                />
+              </span>
+            </a>
+          </div>
+
+          <div className="w-1/2 h-12">
+            <a
+              href="https://www.long-mcquade.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Sponsored by{" "}
+              <span className={styles.logo}>
+                <Image
+                  src="/l&mlogo.jpg"
+                  alt="Long & McQuade Logo"
+                  width={150}
+                  height={30}
+                />
+              </span>
+            </a>
+          </div>
 
           <a href="https://uvss.ca/" target="_blank" rel="noopener noreferrer">
             <span className={styles.logo}>
