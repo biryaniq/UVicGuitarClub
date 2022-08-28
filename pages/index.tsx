@@ -2,10 +2,11 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
-import Guitar from "../components/Guitar/Guitar";
-import NavSidebar from "../components/NavSidebar/NavSidebar";
 import styled from "styled-components";
 import { Router } from "react-router-dom";
+import Guitar from "../components/Guitar/Guitar";
+import NavSidebar from "../components/NavSidebar/NavSidebar";
+import About from "../components/About/about";
 
 const Sidebar = styled.div`
   width: 14em;
@@ -26,6 +27,11 @@ const Container = styled.div`
 
 const GuitarView = styled(Guitar)`
   height: 100%;
+`;
+
+const FlexContainer = styled.div`
+  display: flex;
+  align-content: center;
 `;
 
 const GuitarPosition = styled.div`
@@ -81,77 +87,14 @@ const Home: NextPage = () => {
         <h2>Content</h2>
         <h2>Content</h2>
         <h2>Content</h2>
-        <h2>Content</h2>
-        <h2>Content</h2>
-        <h2>Content</h2>
-        <h2>Content</h2>
-        <h2>Content</h2>
-        <h2>Content</h2>
-        <h2>Content</h2>
-        <h2>Content</h2>
-        <h2>Content</h2>
-        <h2>Content</h2>
-        <h2>Content</h2>
-        <h2>Content</h2>
-        <h2>Content</h2>
-        <h2>Content</h2>
-        <h2>Content</h2>
-        <h2>Content</h2>
-        <h2>Content</h2>
-        <h2>Content</h2>
-        <h2>Content</h2>
-        <h2>Content</h2>
-        <h2>Content</h2>
-        <h2>Content</h2>
-        <h2>Content</h2>
-        <h2>Content</h2>
-        <h2>Content</h2>
-        <h2>Content</h2>
-        <h2>Content</h2>
-        <h2>Content</h2>
-        <h2>Content</h2>
-        <h2>Content</h2>
-        <h2>Content</h2>
-        <h2>Content</h2>
-        <h2>Content</h2>
-        <h2>Content</h2>
-        <h2>Content</h2>
-        <h2>Content</h2>
-        <h2>Content</h2>
-        <h2>Content</h2>
-        <h2>Content</h2>
-        <h2>Content</h2>
         <div>
           <h1 className={styles.title}>Welcome to the UVIC Guitar Club!</h1>
         </div>
       </Main>
 
       <footer className={styles.footer}>
-        {/* <div className="flex mb-4">
-          <div className="w-1/2 bg-gray-400 h-12"></div>
-          <div className="w-1/2 bg-gray-500 h-12"></div>
-        </div> */}
-
-        <div className="flex mb-4">
-          <div className="w-1/2 h-12">
-            <a
-              href="https://www.long-mcquade.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Sponsored by{" "}
-              <span className={styles.logo}>
-                <Image
-                  src="/l&mlogo.jpg"
-                  alt="Long & McQuade Logo"
-                  width={150}
-                  height={30}
-                />
-              </span>
-            </a>
-          </div>
-
-          <div className="w-1/2 h-12">
+        <FlexContainer>
+          <div>
             <a
               href="https://www.long-mcquade.com/"
               target="_blank"
@@ -179,7 +122,7 @@ const Home: NextPage = () => {
               />
             </span>
           </a>
-        </div>
+        </FlexContainer>
       </footer>
     </Container>
   );
