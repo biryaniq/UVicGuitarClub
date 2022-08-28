@@ -67,6 +67,10 @@ const Home: NextPage = () => {
       <Main>
         <About />
         <WhatWeDo />
+        <GetInvolved />
+        <Team />
+        <Projects />
+
         <GuitarPosition>
           <GuitarView />
         </GuitarPosition>
@@ -75,11 +79,7 @@ const Home: NextPage = () => {
       <footer className={styles.footer}>
         <FlexContainer>
           <div>
-            <a
-              href="https://www.long-mcquade.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <a href="https://www.long-mcquade.com/">
               Sponsored by{" "}
               <span className={styles.logo}>
                 <Image
@@ -92,7 +92,7 @@ const Home: NextPage = () => {
             </a>
           </div>
 
-          <a href="https://uvss.ca/" target="_blank" rel="noopener noreferrer">
+          <a href="https://uvss.ca/">
             <span className={styles.logo}>
               <Image
                 src="/UVSS-logo.jpg"

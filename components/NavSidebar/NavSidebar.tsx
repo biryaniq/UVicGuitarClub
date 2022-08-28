@@ -9,9 +9,9 @@ type NavigationLink = {
 const navLinks: NavigationLink[] = [
   { name: "About", link: "/#about" },
   { name: "What We Do", link: "/#what-we-do" },
+  { name: "Get Involved", link: "/#get-involved" },
   { name: "Projects", link: "/#projects" },
   { name: "The Team", link: "/#team" },
-  { name: "Get Involved", link: "/#get-involved" },
 ];
 
 const InactiveLink = styled.div`
