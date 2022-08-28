@@ -10,6 +10,7 @@ const navLinks: NavigationLink[] = [
   { name: "About", link: "/#about" },
   { name: "What We Do", link: "/#what-we-do" },
   { name: "Projects", link: "/#projects" },
+  { name: "The Team", link: "/#team" },
   { name: "Get Involved", link: "/#get-involved" },
 ];
 

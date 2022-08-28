@@ -4,9 +4,14 @@ import Image from "next/image";
 import styles from "../styles/Home.module.css";
 import styled from "styled-components";
 import { Router } from "react-router-dom";
+//components
 import Guitar from "../components/Guitar/Guitar";
 import NavSidebar from "../components/NavSidebar/NavSidebar";
-import About from "../components/About/about";
+import About from "../components/About/About";
+import WhatWeDo from "../components/WhatWeDo/WhatWeDo";
+import Team from "../components/Team/Team";
+import Projects from "../components/Projects/Projects";
+import GetInvolved from "../components/GetInvolved/GetInvolved";
 
 const Sidebar = styled.div`
   width: 14em;
@@ -52,44 +57,19 @@ const Home: NextPage = () => {
         <title>UVic Guitar Club</title>
       </Head>
 
+      <div>
+        <h1 className={styles.title}>Welcome to the UVIC Guitar Club!</h1>
+      </div>
+
       <Sidebar>
         <NavSidebar />
       </Sidebar>
       <Main>
+        <About />
+        <WhatWeDo />
         <GuitarPosition>
           <GuitarView />
         </GuitarPosition>
-        <h2>Content</h2>
-        <h2>Content</h2>
-        <h2>Content</h2>
-        <h2>Content</h2>
-        <h2>Content</h2>
-        <h2>Content</h2>
-        <h2>Content</h2>
-        <h2>Content</h2>
-        <h2>Content</h2>
-        <h2>Content</h2>
-        <h2>Content</h2>
-        <h2>Content</h2>
-        <h2>Content</h2>
-        <h2>Content</h2>
-        <h2>Content</h2>
-        <h2>Content</h2>
-        <h2>Content</h2>
-        <h2>Content</h2>
-        <h2>Content</h2>
-        <h2>Content</h2>
-        <h2>Content</h2>
-        <h2>Content</h2>
-        <h2>Content</h2>
-        <h2>Content</h2>
-        <h2>Content</h2>
-        <h2>Content</h2>
-        <h2>Content</h2>
-        <h2>Content</h2>
-        <div>
-          <h1 className={styles.title}>Welcome to the UVIC Guitar Club!</h1>
-        </div>
       </Main>
 
       <footer className={styles.footer}>
